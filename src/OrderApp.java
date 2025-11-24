@@ -1,6 +1,17 @@
 
 public class OrderApp {
 
+    public static double CalculTTC (int priceHt , int quantity ) {
+    	double total = priceHt * quantity * 1.2; 
+    	return total;
+    }
+    public static void  Afficher (String nom, double price,int  quantity, double total) {
+       System.out.println(nom);
+       System.out.println(price);
+       System.out.println(quantity);
+       System.out.println(total);
+    		
+    }
 	public static void main(String[] args) {
 		
 		String firstCustomerName  = "Alice";
@@ -8,6 +19,9 @@ public class OrderApp {
 		double firstUnitPrice  = 10;
 		
 		int firstQuantity  = 2;
+		double totalAlice=CalculTTC(10,2);
+		
+		Afficher("Alice",10,2,totalAlice);
 		
 		double firstTotalWithVat  = firstUnitPrice  * firstQuantity + firstUnitPrice  * firstQuantity * 0.2;
 
@@ -55,4 +69,4 @@ public class OrderApp {
 			}
 		}
 	}
-}
+}/*git commit -m "Apply naming conventions and formatting" */
