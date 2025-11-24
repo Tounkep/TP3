@@ -52,21 +52,18 @@ public class OrderApp {
 		System.out.println("Total TTC : " + secondTotalWithVat);
 
 		System.out.println("------------------------");
-
-		if ((firstTotalWithVat + secondTotalWithVat) > 30) {
+		double totalOrders = firstTotalWithVat + secondTotalWithVat; 
+		if (totalOrders > 30) {
 			
 			System.out.println("Réduction !");
 			
-		} else {
-			
-			if ((firstTotalWithVat + secondTotalWithVat) > 20) {
+		} else if (totalOrders > 20) {
 				
 				System.out.println("Petite réduction !");
 				
-			} else {
+			   } else {
 				
 				System.out.println("Pas de réduction.");
-			}
-		}
+			   }
 	}
 }/*git commit -m "Apply naming conventions and formatting" */
