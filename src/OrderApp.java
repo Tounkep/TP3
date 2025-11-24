@@ -1,10 +1,20 @@
 
 public class OrderApp {
-
+	/** 
+	* Calcule le montant TTC d'une commande à partir du prix HT et de la quantité. 
+	* 
+	* @param unitPrice prix unitaire hors taxe 
+	* @param quantity  nombre d'articles 
+	* @return montant TTC (TVA 20 % incluse) 
+	*/ 
+	
+	
+    /*Calculer le montant TCC d'une commande à partir du prix HT et de la quantité. */
     public static double CalculTTC (int priceHt , int quantity ) {
     	double total = priceHt * quantity * 1.2; 
     	return total;
     }
+    /* afficher les informations d’un client*/
     public static void  Afficher (String nom, double price,int  quantity, double total) {
        System.out.println(nom);
        System.out.println(price);
